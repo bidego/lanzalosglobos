@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.7">
+
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans|Slabo+27px|UnifrakturCook:700" rel="stylesheet">
+
+    <title>Caza los globos!</title>
+    <link rel="stylesheet" href="style.css?r=rand">
+  </head>
+
+  <body>
+    <div id="loader"></div>
+
+    <div id="container">
+      <nav><ol id="navlist1"><li id="logo">Miau</li><li id="score">Deuda: U$D<em id="overall"></em> M</li><li id="time">Tiempo!</li><li id="restantes"><em id="globosRestantes"></em> ⓖ</li><li id="audio">
+  <audio id="loopGaby" loop>
+      <source src="audio/gabriela-no-se-arrepiente.mp3" type="audio/mpeg">
+  </audio>
+
+      <b id="playButton" onclick="document.getElementById('loopGaby').play()"> ▶</b><b id="pauseButton" onclick="document.getElementById('loopGaby').pause()"> ▮▮</b><b id="stopButton" onclick="document.getElementById('loopGaby').pause();document.getElementById('loopGaby').currentTime = 0"> ◾</b>
+</li></ol><ol id="navlist2"><li id="cartel">Bienvenido a Globolandia. Atrapá los globos si podes, antes de que te agarre hambre o fin de mes. <b>▶</b></li><li id="nuevo">Lanza los globos!</li></ol>
+
+
+ 
+  <!--[if lt IE 9]>
+ 
+  <object id="myTuneObj" type="audio/x-mpeg" data="WhiteChristmas.mp3" autoplay="false" height="45">
+    <param name="src" value="WhiteChristmas.mp3" />
+    <param name="controller" value="true" />
+    <param name="autoplay" value="false" />
+    <param name="autostart" value="0" />
+  </object>
+ 
+  <script>
+    document.getElementById('playButton').onclick = function() { document.getElementById('myTuneObj').play() };
+    document.getElementById('pauseButton').onclick = function() { document.getElementById('myTuneObj').pause() };
+    document.getElementById('stopButton').onclick = function() { document.getElementById('myTuneObj').stop() };
+  </script>
+ 
+  <![endif]-->
+ 
+      </nav>
+      <section id ="canvasSection">
+        <canvas>
+          <img id="imgFondo" width="640" height="480" src="images/villa-xul-txt.jpg" />
+          <img id="mau" class="cursorRight" width="73" height="96" src="images/macri-cursor-2.png" />
+          <img id="gato" width="70" height="63" src="images/gatito.png" /></canvas>
+          
+
+        <script type="text/javascript" src="color-0.1.3.min.js"></script>
+
+        <script src="main-globos.js"></script>
+      <footer style="display:none">
+        <ul><li id="up">▲</li><li id="down">▼</li><li id="left">◄</li><li id="right">►</li></ul>
+      </footer>
+      </section>
+    </div>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-99018209-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+  </body>
+</html>
